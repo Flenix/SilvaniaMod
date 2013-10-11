@@ -11,20 +11,18 @@ import net.minecraft.util.ResourceLocation;
 
 @SideOnly(Side.CLIENT)
 public class RenderBuoy extends RenderLiving {
-    private static final ResourceLocation field_110833_a = new ResourceLocation("silvania", "textures/entities/redbuoy.png");
+    private static final ResourceLocation getTexture = new ResourceLocation("silvania", "textures/entities/redbuoy.png");
 
-    public RenderBuoy(ModelBase par1ModelBase, float par2)
-    {
+    public RenderBuoy(ModelBase par1ModelBase, float par2) {
         super(par1ModelBase, par2);
     }
 
-    protected ResourceLocation func_110832_a(EntityBuoy entity)
-    {
-        return field_110833_a;
+    protected ResourceLocation setTexture(EntityBuoy entity) {
+        return getTexture;
     }
 
-    protected ResourceLocation func_110775_a(Entity entity)
-    {
-        return this.func_110832_a((EntityBuoy)entity);
+    @Override
+    protected ResourceLocation getEntityTexture(Entity entity) {
+        return this.setTexture((EntityBuoy)entity);
     }
 }

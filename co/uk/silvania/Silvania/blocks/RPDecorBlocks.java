@@ -28,7 +28,7 @@ public class RPDecorBlocks extends Block {
 		icons = new Icon[16];
 		
 		for(int i = 0; i < icons.length; i++) {
-			icons[i] = iconRegister.registerIcon("Silvania:" + (this.getUnlocalizedName().substring(5)) + i);
+			icons[i] = iconRegister.registerIcon("silvania:" + (this.getUnlocalizedName().substring(5)) + i);
 		}
 	}
 	

@@ -87,7 +87,7 @@ public class RPLightBlocks extends Block {
 		icons = new Icon[16];
 		
 		for(int i = 0; i < icons.length; i++) {
-			icons[i] = iconRegister.registerIcon("Silvania:rpLightBlocks" + i);
+			icons[i] = iconRegister.registerIcon("silvania:rpLightBlocks" + i);
 		}
 	}
 	

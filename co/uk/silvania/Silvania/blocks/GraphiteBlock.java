@@ -17,6 +17,6 @@ public class GraphiteBlock extends Block {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon("Silvania:" + (this.getUnlocalizedName().substring(5)));
+        blockIcon = iconRegister.registerIcon("silvania:" + (this.getUnlocalizedName().substring(5)));
 	}
 }

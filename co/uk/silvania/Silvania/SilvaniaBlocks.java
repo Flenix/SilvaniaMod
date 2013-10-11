@@ -13,6 +13,8 @@ public class SilvaniaBlocks {
     public static Block rpInvertedLightBlocks;
     public static Block rpLightBlocks;
     public static Block stainedWood;
+    public static Block quartzDecorBlocks;
+    
     public static Block dragiteOre;
     public static Block flariteOre;
     public static Block blackstoneOre;
@@ -36,6 +38,7 @@ public class SilvaniaBlocks {
 	    rpInvertedLightBlocks = new RPLightBlocks(config.rpLightBlocksID, true).setUnlocalizedName("rpLightBlocks");
 	    rpLightBlocks = new RPLightBlocks(config.rpLightBlocksID + 1, false).setUnlocalizedName("rpLightBlocksOff");
 	    stainedWood = new StainedWood(config.stainedWoodID).setUnlocalizedName("stainedWood");
+	    quartzDecorBlocks = new QuartzDecorBlocks(config.quartzDecorID).setUnlocalizedName("quartzDecorBlocks");
 	}
 	
 	public static void initOres() {

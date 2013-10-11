@@ -27,10 +27,11 @@ public class CommonProxy {
         GameRegistry.registerBlock(SilvaniaBlocks.titaniumOre, "titaniumOre");
         GameRegistry.registerBlock(SilvaniaBlocks.graphiteBlock, "graphiteBlock");
         GameRegistry.registerBlock(SilvaniaBlocks.calciteBlock, "calciteBlock");
-        GameRegistry.registerBlock(SilvaniaBlocks.rpDecorBlocks, ItemRPDecorBlocks.class, "Silvania" + (SilvaniaBlocks.rpDecorBlocks.getUnlocalizedName().substring(5)));        
-        GameRegistry.registerBlock(SilvaniaBlocks.rpLightBlocks, ItemRPLightBlocks.class, "Silvania" + (SilvaniaBlocks.rpLightBlocks.getUnlocalizedName().substring(5)));
-        GameRegistry.registerBlock(SilvaniaBlocks.rpInvertedLightBlocks, ItemRPInvertedLightBlocks.class, "Silvania" + (SilvaniaBlocks.rpInvertedLightBlocks.getUnlocalizedName().substring(5)));        
-        GameRegistry.registerBlock(SilvaniaBlocks.stainedWood, ItemStainedWood.class, "Silvania" + (SilvaniaBlocks.stainedWood.getUnlocalizedName().substring(5)));
+        GameRegistry.registerBlock(SilvaniaBlocks.rpDecorBlocks, ItemRPDecorBlocks.class, "silvania" + (SilvaniaBlocks.rpDecorBlocks.getUnlocalizedName().substring(5)));        
+        GameRegistry.registerBlock(SilvaniaBlocks.rpLightBlocks, ItemRPLightBlocks.class, "silvania" + (SilvaniaBlocks.rpLightBlocks.getUnlocalizedName().substring(5)));
+        GameRegistry.registerBlock(SilvaniaBlocks.rpInvertedLightBlocks, ItemRPInvertedLightBlocks.class, "silvania" + (SilvaniaBlocks.rpInvertedLightBlocks.getUnlocalizedName().substring(5)));        
+        GameRegistry.registerBlock(SilvaniaBlocks.stainedWood, ItemStainedWood.class, "silvania" + (SilvaniaBlocks.stainedWood.getUnlocalizedName().substring(5)));
+        GameRegistry.registerBlock(SilvaniaBlocks.quartzDecorBlocks, ItemStainedWood.class, "silvania" + (SilvaniaBlocks.quartzDecorBlocks.getUnlocalizedName().substring(5)));
         //GameRegistry.registerBlock(SilvaniaBlocks.buoyBlock, "buoyBlock");
 	}
 	
@@ -42,6 +43,11 @@ public class CommonProxy {
 		MinecraftForge.setBlockHarvestLevel(SilvaniaBlocks.bluestoneOre, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(SilvaniaBlocks.titaniumOre, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(SilvaniaBlocks.mythianOre, "pickaxe", 3);
+		MinecraftForge.setBlockHarvestLevel(SilvaniaBlocks.graphiteBlock, "pickaxe", 0);
+		MinecraftForge.setBlockHarvestLevel(SilvaniaBlocks.calciteBlock, "pickaxe", 0);
+		MinecraftForge.setBlockHarvestLevel(SilvaniaBlocks.rpDecorBlocks, "pickaxe", 0);
+		MinecraftForge.setBlockHarvestLevel(SilvaniaBlocks.quartzDecorBlocks, "pickaxe", 0);
+		
 	}
 	
 	public void registerItems() {
@@ -138,6 +144,23 @@ public class CommonProxy {
         LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.stainedWood, 1, 13), "Green Wooden Planks");
         LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.stainedWood, 1, 14), "Red Wooden Planks");
         LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.stainedWood, 1, 15), "Black Wooden Planks");
+        
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 0), "Quartz Brick");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 1), "Quartz Brick (Small)");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 2), "Quartz Brick (Small, Wooden-Topped)");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 3), "Quartz Brick (Cracked)");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 4), "Quartz Brick (Small, Cracked)");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 5), "Quartz Brick (Small, Cracked, Wooden-Topped)");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 6), "Quartz Tiles");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 7), "Dirty Quartz");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 8), "Quartz Brick Inked");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 9), "Quartz Brick Inked (Small)");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 10), "Quartz Brick Inked (Small, Wooden-Topped");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 11), "Quartz Brick Inked (Cracked)");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 12), "Inked Quartz Pillar");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 13), "Chiseled Inked Quartz");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 14), "Quartz Tiles Inked");
+        LanguageRegistry.addName(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 15), "Smooth Wood");
 	}
 	
 	public void nameItems() {

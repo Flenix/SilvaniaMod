@@ -12,15 +12,17 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
-public class StainedWood extends Block {
+public class QuartzDecorBlocks extends Block {
 
-	public StainedWood(int id) {
-		super(id, Material.wood);
+	public QuartzDecorBlocks(int id) {
+		super(id, Material.rock);
 		this.setCreativeTab(Silvania.tabSilvania);
+		this.setHardness(3.0F);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
+	private Icon pillerTop;
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
@@ -28,12 +30,37 @@ public class StainedWood extends Block {
 		
 		for(int i = 0; i < icons.length; i++) {
 			icons[i] = iconRegister.registerIcon("silvania:" + (this.getUnlocalizedName().substring(5)) + i);
+			pillerTop = iconRegister.registerIcon("silvania:" + (this.getUnlocalizedName().substring(5)) + "12_top");
 		}
 	}
 	
 	@SideOnly(Side.CLIENT)
-	public Icon getIcon(int par1, int par2) {
-		return icons[par2];
+	public Icon getIcon(int side, int meta) {
+		if (meta == 2 && side == 0) {
+			return icons[1];
+		}
+		if (meta == 2 && side == 1) {
+			return icons[15];
+		}
+		if (meta == 5 && side == 0) {
+			return icons[1];
+		}
+		if (meta == 5 && side == 1) {
+			return icons[15];
+		}
+		if (meta == 10 && side == 0) {
+			return icons[9];
+		}
+		if (meta == 10 && side == 1) {
+			return icons[15];
+		}
+		if (meta == 12 && side == 0) {
+			return pillerTop;
+		}
+		if (meta == 12 && side == 1) {
+			return pillerTop;
+		}
+		return icons[meta];
 	}
 	
 	@SideOnly(Side.CLIENT)

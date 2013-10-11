@@ -14,11 +14,11 @@ public class MythianOre extends Block {
 	public MythianOre(int id) {
 		super(id, Material.rock);
 		this.setCreativeTab(Silvania.tabSilvania);
-		this.setHardness(1.7F);
+		this.setHardness(4.5F);
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon("Silvania:" + (this.getUnlocalizedName().substring(5)));
+        blockIcon = iconRegister.registerIcon("silvania:" + (this.getUnlocalizedName().substring(5)));
 	}
 	
     public int idDropped(int par1, Random random, int par2) {

@@ -26,7 +26,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid="Silvania", name="Silvania", version="0.1.1")
+@Mod(modid="silvania", name="Silvania", version="0.2")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Silvania { 
 	
@@ -72,7 +72,7 @@ public class Silvania {
             LanguageRegistry.instance().addStringLocalization("itemGroup.tabSilvania", "en_US", "Silvania");
             GameRegistry.registerWorldGenerator(new WorldGen());
             
-            EntityRegistry.registerModEntity(EntityBuoy.class, "Buoy", 2, this, 80, 3, true);
+            //EntityRegistry.registerModEntity(EntityBuoy.class, "Buoy", 2, this, 80, 3, true);
             
             
             //CRAFTING RECIPES
@@ -102,14 +102,44 @@ public class Silvania {
             ItemStack coal = new ItemStack(Item.coal);
             ItemStack ironIngot = new ItemStack(Item.ingotIron);
             ItemStack tinyTitaniumDust = new ItemStack(SilvaniaItems.titaniumDustTiny);
+            ItemStack quartzBlock = new ItemStack(Block.blockNetherQuartz);
+            ItemStack quartzBrick = new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 0);
+            ItemStack quartzSmallBrick = new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 1);
+            ItemStack smoothWood = new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 15);
+            ItemStack quartzSmallWooden = new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 2);
+            ItemStack dirtBlock = new ItemStack(Block.dirt);
+            ItemStack quartzBrickCracked = new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 3);
+            ItemStack quartzBrickInked = new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 8);
+            ItemStack quartzPillar = new ItemStack(Block.blockNetherQuartz, 1, 2);
+            ItemStack quartzChiseled = new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 1);
+            ItemStack quartzTiles = new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 6);
             
             //Shaped
             GameRegistry.addRecipe(new ItemStack(SilvaniaBlocks.rpDecorBlocks, 4, 1), "cc", "cc", 'c', calcite);
             GameRegistry.addRecipe(new ItemStack(SilvaniaBlocks.rpDecorBlocks, 4, 5), "gg", "gg", 'g', graphite);
+            GameRegistry.addRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 4, 0), "qq", "qq", 'q', quartzBlock);
+            GameRegistry.addRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 3, 15), "w  ", " w ", "  W", 'w', woodStack);
+            GameRegistry.addRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 4, 6), "q q", "   ", "q q", 'q', quartzBlock);
             
             //Shapeless
             GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaItems.rawSteel, 1, 0), coal, coal, coal, coal, ironIngot);
             GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaItems.titaniumDust, 1, 0), tinyTitaniumDust, tinyTitaniumDust, tinyTitaniumDust, tinyTitaniumDust);
+            
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 9, 1), quartzBlock, quartzBlock, quartzBlock, quartzBlock, quartzBlock, quartzBlock, quartzBlock, quartzBlock, quartzBlock);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 2), quartzSmallBrick, smoothWood);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 3), quartzBrick);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 4), quartzSmallBrick);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 5), quartzSmallWooden);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 7), quartzBlock, dirtBlock);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 8), blackDye, quartzBrick);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 9), blackDye, quartzSmallBrick);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 10), blackDye, quartzSmallWooden);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 11), blackDye, quartzBrickCracked);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 11), quartzBrickInked);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 12), blackDye, quartzPillar);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 13), blackDye, quartzChiseled);
+            GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.quartzDecorBlocks, 1, 14), blackDye, quartzTiles);
+            
             
             GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.rpLightBlocks, 1, 0), unlitLight, whiteDye);
             GameRegistry.addShapelessRecipe(new ItemStack(SilvaniaBlocks.rpLightBlocks, 1, 1), unlitLight, orangeDye);

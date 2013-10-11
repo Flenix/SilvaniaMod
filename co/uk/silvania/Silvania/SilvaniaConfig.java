@@ -12,6 +12,7 @@ public class SilvaniaConfig {
     public static int calciteBlockID;
     public static int rpLightBlocksID;
     public static int stainedWoodID;
+    public static int quartzDecorID;
     
 	public static int dragiteOreID;
 	public static int flariteOreID;
@@ -68,6 +69,7 @@ public class SilvaniaConfig {
 		
 		airFilterBlockID = config.getBlock("Air Filter", 2305).getInt();
 		buoyBlockID = config.getBlock("Buoy", 2310).getInt();
+		quartzDecorID = config.getBlock("Quartz Decorative", 2311).getInt();
 		
 		silvaniaLogoItemID = config.getItem("Silvania Logo", 17300).getInt();
 		poisonedBreadID = config.getItem("Poisoned Bread", 17301).getInt();

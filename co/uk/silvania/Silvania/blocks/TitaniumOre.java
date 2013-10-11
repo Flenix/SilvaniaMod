@@ -10,11 +10,11 @@ public class TitaniumOre extends Block {
 	public TitaniumOre(int id) {
 		super(id, Material.rock);
 		this.setCreativeTab(Silvania.tabSilvania);
-		this.setHardness(1.4F);
+		this.setHardness(2.6F);
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon("Silvania:" + (this.getUnlocalizedName().substring(5)));
+        blockIcon = iconRegister.registerIcon("silvania:" + (this.getUnlocalizedName().substring(5)));
 	}
 	
 
